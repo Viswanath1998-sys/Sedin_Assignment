@@ -57,6 +57,7 @@ struct SpeciesListView: View {
         switch viewModel.viewState {
         case .loading:
             CircularLoader()
+            
         case .dataEmpty:
             VStack(spacing: 20){
                 EmptyStateView(emptyMessage: "No Species found.")
@@ -68,8 +69,10 @@ struct SpeciesListView: View {
                     Text("Retry").padding().font(.headline).foregroundStyle(.white).background(Capsule(style: .circular))
                 }
             }
+            
         case .searchEmpty:
             EmptyStateView(emptyMessage: "No matches found for your seach.")
+            
         case .hasData:
             ScrollView{
                 LazyVStack{

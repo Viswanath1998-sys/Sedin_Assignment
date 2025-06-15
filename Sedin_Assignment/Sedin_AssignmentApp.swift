@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Sedin_AssignmentApp: App {
-    @StateObject var networkMonitor = NetworkMonitor()
+    @StateObject private var networkMonitor = NetworkMonitor()
 
     var body: some Scene {
         WindowGroup {

@@ -19,6 +19,7 @@ class SpeciesListViewModel: ObservableObject{
     @Published var filteredSpeciesList:[Species] = []
     @Published var errorMessage: String? = nil
     @Published var showError: Bool = false
+    
     let networkManager = NetworkManager.shared
     let speciesStorageManager = SpeciesStorageManager.shared
     
